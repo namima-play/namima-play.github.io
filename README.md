@@ -2,13 +2,15 @@
 
 Play: https://namima-play.github.io/
 
-This repository publishes the reviewed static NAMIMA game at the name-free organization hostname. The current release is **v5.4.0** with 10 interface languages.
+This repository publishes the reviewed static NAMIMA game at the name-free organization hostname. The current release is **v5.4.0**, with the approved 2026-10-19 mobile layout and result-grade update, and 10 interface languages.
 
 ## Source of truth
 
 Development, tests, and existing feedback remain in [Masashi-Nakadaira/namima](https://github.com/Masashi-Nakadaira/namima).
 
-Deployed game source commit: `3a7c4713daaa716058037df6306f7b0a64e300b3`.
+Deployed game files match the user-reviewed Sites source commit `94cf6aeba17b19b7e3408ccc5a9529638d4f94df`, directory `dist/comparison-20261018/candidate/`. Its GitHub source baseline is `a142a1fd436cf20d03bd1225e64314e1e0fa55e6`; this approved update is published directly here, and has not yet been synchronized to the development repository.
+
+The mobile play screen has reduced top spacing and a bottom judgment button with safe-area spacing. Results show S at 450+, A at 400+, B at 300+, and C below 300 out of 500. Existing retry actions appear before the round breakdown. Scoring, challenge generation, and sharing content are unchanged. Grade explanatory text is Japanese in Japanese mode and English in other languages.
 
 ## Publish an update
 
@@ -27,6 +29,6 @@ The existing source repository and feedback issue are retained. The public game 
 
 After five rounds, share a result link so the recipient can play the exact same five questions. A score-free invitation is also available. Scores are self-reported and unverified; no identity, tracking, account, or leaderboard is added. All ten languages and existing play instructions remain available.
 
-The source release passes 101 automated checks, including 3,000 deterministic seeds, strict challenge validation, first-score locking, score privacy, sharing fallbacks, and existing language/UI regressions. Real mobile-device share sheets remain unverified.
+The reviewed release passes 116 automated checks, including 3,000 deterministic seeds, strict challenge validation, first-score locking, score privacy, sharing fallbacks, existing language/UI regressions, grade boundaries, and both retry paths. Real mobile-device share sheets remain unverified.
 
-Rollback: restore all static files from public commit `794f12bca4bdcbfd833cea23614833119403f846` and source commit `3766d5dc0fc502a8da25c33e36c9c65b4f28a125` together via a new commit; do not rewrite history.
+Previous release: public commit `6ead3e1c7421993f10e5771c83017b3a1e15065e` and GitHub source commit `a142a1fd436cf20d03bd1225e64314e1e0fa55e6`. If restoration is required, restore the prior static file contents via a new commit; do not rewrite history. Added grade assets can remain unreferenced.

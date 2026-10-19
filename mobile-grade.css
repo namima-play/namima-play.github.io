@@ -1,0 +1,31 @@
+/* Play-only compact phone layout. Keep touch targets and wave proportions. */
+.result-grade{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:0 0 8px}
+.result-grade strong{font:500 36px ui-monospace,monospace;color:var(--gold)}
+.result-grade span{font-size:12px;color:var(--muted)}
+.grade-scale{font:11px/1.6 ui-monospace,monospace;color:var(--muted);margin:0 0 12px}
+@media(max-width:760px), (pointer:coarse) and (max-height:500px){
+ body:has(#play:not([hidden])) .topbar{padding:2px 12px;min-height:48px}
+ body:has(#play:not([hidden])) main{padding:2px 12px calc(82px + env(safe-area-inset-bottom,0px))}
+ #play .play-body{display:block}
+ #play .round-header{margin:0 0 2px;gap:8px;align-items:center}
+ #play .round-header h1{font-size:17px;line-height:1.35;margin:2px 0}
+ #play .round-header .text-button{min-height:44px;padding:4px}
+ #play .challenge-meta{margin:0 0 4px;line-height:1.35;font-size:10px}
+ #play .entry-guide{font-size:11px;line-height:1.4;margin:0 0 2px}
+ #play .comparison{position:relative;top:auto;padding-top:0;z-index:auto}
+ #play .fields h2{height:24px}
+ #play .comparison-note{margin:3px 0}
+ #play #profilesDetail{margin-bottom:4px}
+ #play #profilesDetail summary{min-height:44px;padding:10px 2px}
+ #play .control-panel{padding:10px}
+ #play .control{margin-bottom:6px}
+ #play .knob-row{margin-top:2px;gap:8px}
+ #play input[type=range]{height:44px}
+ #play .small-actions button{min-height:44px}
+ #play #primary{position:fixed;z-index:10;left:12px;right:12px;width:calc(100% - 24px);bottom:calc(8px + env(safe-area-inset-bottom,0px));min-height:50px;margin:0;box-shadow:0 0 0 8px var(--bg),0 -8px 18px var(--bg)}
+ #play .judgment{scroll-margin-bottom:calc(82px + env(safe-area-inset-bottom,0px));scroll-margin-top:8px}
+}
+/* Very short/landscape viewports retain document scrolling, never clip controls. */
+@media(max-height:500px) and (pointer:coarse){
+ #play .fields{max-width:360px;margin-inline:auto}
+}
